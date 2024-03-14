@@ -57,7 +57,7 @@ fi
 if [[ ${dependency_stat} == 0 ]];
 then
 	echo "Please make sure that these dependencies installed!"
-	exit 0
+	exit 127
 fi
 
 ## set pathes for heliano
@@ -86,13 +86,13 @@ sed -i "s|_SPLIT_JOINT_|${SPLIT}|" heliano
 
 sed -i "s|_SORTPRO_|${SORT}|" heliano
 
-chmod 755 heliano
+chmod +x heliano
 
 ## set pathes for heliano_cons
 
 cp heliano_cons.py heliano_cons
 sed -i "s|_INTERPRETERPYTHON_PATH_|${myPYTHON_PATH}|" heliano_cons
-chmod 755 heliano_cons
+chmod +x heliano_cons
 
 if [ ! -d "bin" ];then mkdir bin;fi
 mv heliano heliano_cons bin/
