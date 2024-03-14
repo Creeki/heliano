@@ -1,4 +1,4 @@
-#!_INTERPRETERPYTHON_PATH_
+#!/usr/bin/env python3
 
 import os, re, subprocess, sys, argparse, shutil, random, gc
 from Bio import SeqIO

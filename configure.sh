@@ -72,8 +72,6 @@ SORT=${SCRIT_DIR_PATH}/Sort.sh
 
 cp heliano.py heliano
 
-sed -i "s|_INTERPRETERPYTHON_PATH_|${myPYTHON_PATH}|" heliano
-
 sed -i "s|_HMM_|${HMMmodel}|" heliano
 
 sed -i "s|_HEADER_|${Headermodel}|" heliano
@@ -91,7 +89,7 @@ chmod +x heliano
 ## set pathes for heliano_cons
 
 cp heliano_cons.py heliano_cons
-sed -i "s|_INTERPRETERPYTHON_PATH_|${myPYTHON_PATH}|" heliano_cons
+
 chmod +x heliano_cons
 
 if [ ! -d "bin" ];then mkdir bin;fi
